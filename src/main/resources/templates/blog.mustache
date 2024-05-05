@@ -1,0 +1,35 @@
+{{> header}}
+
+<h1>{{title}}</h1>
+
+<div class="articles">
+
+    <hr>
+    {{#banner}}
+        <section>
+            <header class="banner">
+                <h2 class="banner-title">{{title}}!!!!!</h2>
+            </header>
+            <div class="banner-content">
+                {{content}}
+            </div>
+        </section>
+    {{/banner}}
+    <hr>
+
+    {{#articles}}
+        <section>
+            <header class="article-header">
+                <h2 class="article-title"><a href="/article/{{slug}}">{{title}}</a></h2>
+                <div class="article-meta">By <strong>{{author.firstname}}.{{author.lastname}}</strong>
+                    , on <strong>{{addedAt}}</strong> <U>({{wildAddedAt}})</U>
+                </div>
+            </header>
+            <div class="article-description">
+                {{headline}}
+            </div>
+        </section>
+    {{/articles}}
+</div>
+
+{{> footer}}
